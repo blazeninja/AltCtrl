@@ -7,9 +7,5 @@
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="MainMenuButton" parent="CanvasLayer" instance=ExtResource("1_qt8u3")]
-offset_left = 252.0
-offset_top = 1165.0
-offset_right = 513.0
-offset_bottom = 1231.0
 
 [connection signal="pressed" from="CanvasLayer/MainMenuButton" to="CanvasLayer/MainMenuButton" method="_on_pressed"]
