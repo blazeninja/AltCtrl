@@ -42,7 +42,7 @@ theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("1_ok5um")
 theme_override_font_sizes/font_size = 86
-text = "Alt-Chery "
+text = "Archery"
 
 [node name="StartButton" type="Button" parent="UI"]
 layout_mode = 0
