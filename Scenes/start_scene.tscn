@@ -1,5 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://4c781v4xrped"]
+[gd_scene load_steps=6 format=3 uid="uid://4c781v4xrped"]
 
+[ext_resource type="Script" path="res://Scenes/start_scene.gd" id="1_7ob2q"]
 [ext_resource type="FontFile" uid="uid://63jcwrinvwcn" path="res://fonts/Permanent_Marker/PermanentMarker-Regular.ttf" id="1_ok5um"]
 
 [sub_resource type="Gradient" id="Gradient_61kk2"]
@@ -15,6 +16,7 @@ fill_to = Vector2(0.807339, 0.784404)
 [sub_resource type="Theme" id="Theme_ae0ku"]
 
 [node name="StartScene" type="Node2D"]
+script = ExtResource("1_7ob2q")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(574, 325)
@@ -54,7 +56,7 @@ theme_override_fonts/font = ExtResource("1_ok5um")
 theme_override_font_sizes/font_size = 40
 text = "Play Game"
 
-[node name="Button2" type="Button" parent="UI"]
+[node name="QuitButton" type="Button" parent="UI"]
 layout_mode = 0
 offset_left = 783.0
 offset_top = 555.0
@@ -65,3 +67,6 @@ theme_override_colors/font_hover_color = Color(1, 0, 0, 1)
 theme_override_fonts/font = ExtResource("1_ok5um")
 theme_override_font_sizes/font_size = 40
 text = "Quit"
+
+[connection signal="pressed" from="UI/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="UI/QuitButton" to="." method="_on_quit_button_pressed"]
