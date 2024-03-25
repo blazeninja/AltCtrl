@@ -1,0 +1,66 @@
+[gd_scene load_steps=5 format=3 uid="uid://4c781v4xrped"]
+
+[ext_resource type="FontFile" uid="uid://63jcwrinvwcn" path="res://fonts/Permanent_Marker/PermanentMarker-Regular.ttf" id="1_ok5um"]
+
+[sub_resource type="Gradient" id="Gradient_61kk2"]
+offsets = PackedFloat32Array(0.246753, 0.5, 0.766234, 0.961039)
+colors = PackedColorArray(1, 1, 1, 1, 0.840435, 0.840435, 1.92523e-06, 1, 1, 0, 0, 1, 0, 0.00392157, 0.92549, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_gncwt"]
+gradient = SubResource("Gradient_61kk2")
+fill = 1
+fill_from = Vector2(0.504587, 0.513761)
+fill_to = Vector2(0.807339, 0.784404)
+
+[sub_resource type="Theme" id="Theme_ae0ku"]
+
+[node name="StartScene" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(574, 325)
+scale = Vector2(18, 10.1563)
+texture = SubResource("GradientTexture2D_gncwt")
+
+[node name="UI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="UI"]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 67.0
+offset_top = 66.0
+offset_right = 485.0
+offset_bottom = 190.0
+theme = SubResource("Theme_ae0ku")
+theme_override_colors/font_color = Color(1, 0.996078, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_ok5um")
+theme_override_font_sizes/font_size = 86
+text = "Alt-Chery"
+
+[node name="StartButton" type="Button" parent="UI"]
+layout_mode = 0
+offset_left = 782.0
+offset_top = 442.0
+offset_right = 1043.0
+offset_bottom = 508.0
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+theme_override_colors/font_hover_color = Color(1, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_ok5um")
+theme_override_font_sizes/font_size = 40
+text = "Play Game"
+
+[node name="Button2" type="Button" parent="UI"]
+offset_left = 783.0
+offset_top = 555.0
+offset_right = 1044.0
+offset_bottom = 621.0
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+theme_override_colors/font_hover_color = Color(1, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_ok5um")
+theme_override_font_sizes/font_size = 40
+text = "Quit"
