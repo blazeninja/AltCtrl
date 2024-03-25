@@ -1,52 +1,20 @@
-[gd_scene load_steps=7 format=3 uid="uid://k2t0wtg1cvek"]
+[gd_scene load_steps=3 format=3 uid="uid://k2t0wtg1cvek"]
 
 [ext_resource type="Texture2D" uid="uid://ibbaq0kumsjt" path="res://assets/target.png" id="1_357rl"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_kg8a3"]
-radius = 100.02
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_c0063"]
-radius = 77.0065
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_fs64x"]
-radius = 56.5155
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_27rl1"]
-radius = 34.2053
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_028ue"]
-radius = 14.0357
+radius = 99.2472
 
 [node name="TargetProto" type="Area2D"]
 position = Vector2(560, 292)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
-position = Vector2(-11, -11)
+position = Vector2(-5, -6)
 scale = Vector2(6.10106, 6.10106)
 texture = ExtResource("1_357rl")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-5, -5)
+[node name="Point1" type="CollisionShape2D" parent="."]
+position = Vector2(1, 0)
 shape = SubResource("CircleShape2D_kg8a3")
 debug_color = Color(0, 0, 0, 0.419608)
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
-position = Vector2(-5, -6)
-shape = SubResource("CircleShape2D_c0063")
-debug_color = Color(0.964706, 0, 0.482353, 0.419608)
-
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
-position = Vector2(-5, -6)
-shape = SubResource("CircleShape2D_fs64x")
-debug_color = Color(1, 1, 1, 0.419608)
-
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="."]
-position = Vector2(-5, -6)
-shape = SubResource("CircleShape2D_27rl1")
-debug_color = Color(0.996078, 0, 0.211765, 0.419608)
-
-[node name="CollisionShape2D5" type="CollisionShape2D" parent="."]
-position = Vector2(-5, -6)
-shape = SubResource("CircleShape2D_028ue")
-debug_color = Color(0.882353, 0.976471, 1, 0.419608)
