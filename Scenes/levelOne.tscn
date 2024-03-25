@@ -4,5 +4,6 @@
 
 [node name="LevelOne" type="Node2D"]
 
-[node name="MainMenuButton" parent="." instance=ExtResource("1_qt8u3")]
-position = Vector2(-1, 2)
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="MainMenuButton" parent="CanvasLayer" instance=ExtResource("1_qt8u3")]
