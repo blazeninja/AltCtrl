@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://cc40kl8hrsq8s"]
+
+[ext_resource type="FontFile" uid="uid://63jcwrinvwcn" path="res://fonts/Permanent_Marker/PermanentMarker-Regular.ttf" id="1_a6s2b"]
+[ext_resource type="Script" path="res://Scripts/Score.gd" id="2_b8caq"]
+
+[node name="Score" type="Label"]
+offset_left = 27.0
+offset_top = 25.0
+offset_right = 191.0
+offset_bottom = 83.0
+theme_override_colors/font_color = Color(0.996078, 0.996078, 0.996078, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_a6s2b")
+theme_override_font_sizes/font_size = 40
+text = "Score: 0"
+script = ExtResource("2_b8caq")
