@@ -55,6 +55,7 @@ theme_override_font_sizes/font_size = 40
 text = "Play Game"
 
 [node name="Button2" type="Button" parent="UI"]
+layout_mode = 0
 offset_left = 783.0
 offset_top = 555.0
 offset_right = 1044.0
