@@ -7,3 +7,5 @@
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="MainMenuButton" parent="CanvasLayer" instance=ExtResource("1_qt8u3")]
+
+[connection signal="pressed" from="CanvasLayer/MainMenuButton" to="CanvasLayer/MainMenuButton" method="_on_pressed"]
