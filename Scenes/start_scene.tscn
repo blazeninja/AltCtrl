@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://4c781v4xrped"]
 
-[ext_resource type="Script" path="res://Scenes/start_scene.gd" id="1_7ob2q"]
+[ext_resource type="Script" path="res://Scripts/start_scene.gd" id="1_7ob2q"]
 [ext_resource type="FontFile" uid="uid://63jcwrinvwcn" path="res://fonts/Permanent_Marker/PermanentMarker-Regular.ttf" id="1_ok5um"]
 
 [sub_resource type="Gradient" id="Gradient_61kk2"]
