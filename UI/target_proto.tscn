@@ -1,12 +1,14 @@
-[gd_scene load_steps=3 format=3 uid="uid://k2t0wtg1cvek"]
+[gd_scene load_steps=4 format=3 uid="uid://k2t0wtg1cvek"]
 
 [ext_resource type="Texture2D" uid="uid://ibbaq0kumsjt" path="res://assets/target.png" id="1_357rl"]
+[ext_resource type="Script" path="res://UI/target.gd" id="1_wee20"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_kg8a3"]
 radius = 99.2472
 
 [node name="TargetProto" type="Area2D"]
 position = Vector2(560, 292)
+script = ExtResource("1_wee20")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
@@ -14,7 +16,9 @@ position = Vector2(-5, -6)
 scale = Vector2(6.10106, 6.10106)
 texture = ExtResource("1_357rl")
 
-[node name="Point1" type="CollisionShape2D" parent="."]
+[node name="collision" type="CollisionShape2D" parent="."]
 position = Vector2(1, 0)
 shape = SubResource("CircleShape2D_kg8a3")
 debug_color = Color(0, 0, 0, 0.419608)
+
+[connection signal="child_entered_tree" from="collision" to="." method="_on_point_1_child_entered_tree"]
