@@ -21,4 +21,4 @@ position = Vector2(1, 0)
 shape = SubResource("CircleShape2D_kg8a3")
 debug_color = Color(0, 0, 0, 0.419608)
 
-[connection signal="child_entered_tree" from="collision" to="." method="_on_point_1_child_entered_tree"]
+[connection signal="input_event" from="." to="." method="_on_input_event"]
