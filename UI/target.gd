@@ -17,11 +17,11 @@ func _on_input_event(viewport, event, shape_idx):
 		
 		if distance_from_center <= 15:
 			Score.score += 10
-		if distance_from_center <= 31:
+		if distance_from_center >= 15 and distance_from_center <= 31:
 			Score.score += 5
-		if distance_from_center <= 55:
+		if distance_from_center >= 31 and distance_from_center <= 55:
 			Score.score += 3
-		if distance_from_center <= 80:
+		if distance_from_center >= 55 and distance_from_center <= 80:
 			Score.score += 2
-		if distance_from_center <= 98:
+		if distance_from_center >= 80 and distance_from_center <= 98:
 			Score.score += 1
