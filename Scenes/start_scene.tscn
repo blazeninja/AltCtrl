@@ -2,10 +2,10 @@
 
 [ext_resource type="Script" path="res://Scripts/start_scene.gd" id="1_7ob2q"]
 [ext_resource type="FontFile" uid="uid://63jcwrinvwcn" path="res://fonts/Permanent_Marker/PermanentMarker-Regular.ttf" id="1_ok5um"]
-[ext_resource type="Texture2D" uid="uid://gom4p68b4o8f" path="res://assets/mainmenu.png" id="2_u5iag"]
-[ext_resource type="Texture2D" uid="uid://d1hb7wdyy5npo" path="res://assets/title.png" id="3_d6mtd"]
-[ext_resource type="Texture2D" uid="uid://tc7djm8yd60j" path="res://assets/play.png" id="5_5mdoe"]
-[ext_resource type="Texture2D" uid="uid://bordrxy215xxo" path="res://assets/quit.png" id="6_dlpou"]
+[ext_resource type="Texture2D" uid="uid://gom4p68b4o8f" path="res://Assets/mainmenu.png" id="2_u5iag"]
+[ext_resource type="Texture2D" uid="uid://d1hb7wdyy5npo" path="res://Assets/title.png" id="3_d6mtd"]
+[ext_resource type="Texture2D" uid="uid://tc7djm8yd60j" path="res://Assets/play.png" id="5_5mdoe"]
+[ext_resource type="Texture2D" uid="uid://bordrxy215xxo" path="res://Assets/quit.png" id="6_dlpou"]
 
 [node name="StartScene" type="Node2D"]
 script = ExtResource("1_7ob2q")
