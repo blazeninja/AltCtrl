@@ -10,7 +10,7 @@ radius = 0.46841
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
 
 [node name="Sprite3D" type="Sprite3D" parent="StaticBody3D"]
-transform = Transform3D(2.98145, 0, 0, 0, 2.98145, 0, 0, 0, 2.98145, -0.0198476, 0.0198479, 0)
+transform = Transform3D(2.98145, 0, 0, 0, 2.98145, 0, 0, 0, 2.98145, -0.0364342, 0.0198479, 0.998356)
 texture = ExtResource("1_cd1cw")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]

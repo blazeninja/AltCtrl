@@ -42,4 +42,7 @@ transform = Transform3D(19.9098, 0, 0, 0, 2.03346, 0.300403, 0, -11.2732, 0.0541
 texture = ExtResource("3_v12b3")
 
 [node name="Target3D" parent="." instance=ExtResource("1_12ltf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.01526, 10.4264, 26.2587)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1674, 8.13523, -1.67498)
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.64728, 7.40606)
