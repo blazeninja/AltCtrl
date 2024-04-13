@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://divh2svl2ihi8"]
+
+[ext_resource type="Script" path="res://Scripts/crosshair.gd" id="1_xqfbf"]
+[ext_resource type="Texture2D" uid="uid://cqegm3sm662rn" path="res://assets/crosshair2.png" id="2_fhxuc"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_umqk1"]
+radius = 7.0
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+position = Vector2(447, 279)
+script = ExtResource("1_xqfbf")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(36, -39)
+scale = Vector2(1.79787, 1.79787)
+texture = ExtResource("2_fhxuc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(38, -37)
+shape = SubResource("CircleShape2D_umqk1")
