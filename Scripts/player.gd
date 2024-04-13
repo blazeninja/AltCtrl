@@ -10,8 +10,13 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var bow_equipped = true
 var bow_cooldown = true
 var arrow = preload("res://Scenes/arrow.tscn")
+var mouse_loc_from_player = null
 
 func _physics_process(delta):
+	
+	mouse_loc_from_player = get_global_mouse_position() - self.position
+	
+	
 	# Add the gravity.
 	if not is_on_floor():
 		velocity.y += gravity * delta
