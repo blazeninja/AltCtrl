@@ -1,20 +1,27 @@
-[gd_scene load_steps=5 format=3 uid="uid://cvnox7t61ecge"]
+[gd_scene load_steps=4 format=3 uid="uid://dcc8d28hwv2jm"]
 
 [ext_resource type="Texture2D" uid="uid://dyxwunahw7rfv" path="res://Assets/arrow.png" id="1_bfgup"]
+[ext_resource type="Script" path="res://Scripts/arrow.gd" id="1_gxpdl"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_b2qsu"]
-albedo_texture = ExtResource("1_bfgup")
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ophae"]
+size = Vector2(17, 2)
 
-[sub_resource type="QuadMesh" id="QuadMesh_52js6"]
-material = SubResource("StandardMaterial3D_b2qsu")
+[node name="arrow" type="Area2D"]
+scale = Vector2(5, 5)
+script = ExtResource("1_gxpdl")
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_abnfq"]
-size = Vector3(1, 1, 0.001)
+[node name="Sprite2D" type="Sprite2D" parent="."]
+rotation = 1.5708
+texture = ExtResource("1_bfgup")
+region_enabled = true
+region_rect = Rect2(12.8487, 30.1475, 20.5128, 28.8369)
 
-[node name="arrow" type="RigidBody3D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, 0)
+shape = SubResource("RectangleShape2D_ophae")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-mesh = SubResource("QuadMesh_52js6")
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="."]
+position = Vector2(-0.5, 0.5)
+scale = Vector2(0.25, 0.55)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-shape = SubResource("BoxShape3D_abnfq")
+[connection signal="screen_exited" from="VisibleOnScreenEnabler2D" to="." method="_on_visible_on_screen_enabler_2d_screen_exited"]
