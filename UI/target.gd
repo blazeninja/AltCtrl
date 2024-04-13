@@ -16,12 +16,12 @@ func _on_input_event(viewport, event, shape_idx):
 		var distance_from_center = position.distance_to(event.position)
 		
 		if distance_from_center <= 15:
-			Score.score += 10
+			Global.score += 10
 		if distance_from_center >= 15 and distance_from_center <= 31:
-			Score.score += 5
+			Global.score += 5
 		if distance_from_center >= 31 and distance_from_center <= 55:
-			Score.score += 3
+			Global.score += 3
 		if distance_from_center >= 55 and distance_from_center <= 80:
-			Score.score += 2
+			Global.score += 2
 		if distance_from_center >= 80 and distance_from_center <= 98:
-			Score.score += 1
+			Global.score += 1
