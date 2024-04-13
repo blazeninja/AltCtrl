@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://cvnox7t61ecge"]
+
+[ext_resource type="Texture2D" uid="uid://dyxwunahw7rfv" path="res://Assets/arrow.png" id="1_bfgup"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_b2qsu"]
+albedo_texture = ExtResource("1_bfgup")
+
+[sub_resource type="QuadMesh" id="QuadMesh_52js6"]
+material = SubResource("StandardMaterial3D_b2qsu")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_abnfq"]
+size = Vector3(1, 1, 0.001)
+
+[node name="arrow" type="RigidBody3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("QuadMesh_52js6")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_abnfq")
