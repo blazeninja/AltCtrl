@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://cwfifm62giko"]
+[gd_scene load_steps=7 format=3 uid="uid://cwfifm62giko"]
 
 [ext_resource type="Texture2D" uid="uid://bte70gggrtx0t" path="res://Assets/skyBackground.png" id="1_pwilp"]
 [ext_resource type="PackedScene" uid="uid://htd5k34jlfqn" path="res://UI/MainMenuButton.tscn" id="1_qt8u3"]
 [ext_resource type="PackedScene" uid="uid://cc40kl8hrsq8s" path="res://UI/score.tscn" id="2_65862"]
 [ext_resource type="PackedScene" uid="uid://k2t0wtg1cvek" path="res://UI/target_proto.tscn" id="3_6kbem"]
 [ext_resource type="AudioStream" uid="uid://cj7fter5nyt10" path="res://Audio/Archery_BGMusic.ogg" id="5_chn38"]
+[ext_resource type="PackedScene" uid="uid://b7kr24ktgmqsl" path="res://Scenes/player.tscn" id="6_733qu"]
 
 [node name="LevelOne" type="Node2D"]
 
@@ -26,5 +27,8 @@ position = Vector2(1026, 497)
 [node name="BackgroundMusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_chn38")
 autoplay = true
+
+[node name="player" parent="." instance=ExtResource("6_733qu")]
+position = Vector2(127, 524)
 
 [connection signal="pressed" from="CanvasLayer/MainMenuButton" to="CanvasLayer/MainMenuButton" method="_on_pressed"]

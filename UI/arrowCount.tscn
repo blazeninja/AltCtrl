@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://ia4jdct8dy5q"]
+
+[ext_resource type="Script" path="res://Scripts/arrowCount.gd" id="1_qy7ib"]
+
+[node name="arrowCount" type="Label"]
+anchors_preset = -1
+anchor_left = 0.925
+anchor_right = 1.0
+anchor_bottom = 0.075
+offset_left = 19.3999
+offset_top = 8.0
+offset_right = -14.0
+offset_bottom = -10.6
+script = ExtResource("1_qy7ib")
