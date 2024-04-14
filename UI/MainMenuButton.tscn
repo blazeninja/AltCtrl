@@ -1,9 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://htd5k34jlfqn"]
+[gd_scene load_steps=4 format=3 uid="uid://htd5k34jlfqn"]
 
 [ext_resource type="FontFile" uid="uid://63jcwrinvwcn" path="res://fonts/Permanent_Marker/PermanentMarker-Regular.ttf" id="1_c5xc4"]
 [ext_resource type="Script" path="res://scripts/MainMenuButton.gd" id="2_20i8a"]
+[ext_resource type="AudioStream" uid="uid://clfrbrob3psec" path="res://Audio/archeryclick.ogg" id="3_5ikf5"]
 
-[node name="MainMenuButton" type="Button"]
+[node name="MainMenuButton" type="Button" node_paths=PackedStringArray("buttonsound", "buttondelay")]
 offset_left = 867.0
 offset_top = 26.0
 offset_right = 1128.0
@@ -14,3 +15,13 @@ theme_override_fonts/font = ExtResource("1_c5xc4")
 theme_override_font_sizes/font_size = 40
 text = "Main Menu"
 script = ExtResource("2_20i8a")
+buttonsound = NodePath("AudioStreamPlayer")
+buttondelay = NodePath("Timer")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_5ikf5")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.383
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

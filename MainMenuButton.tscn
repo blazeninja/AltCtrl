@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://bvdlcfdxtf1ed"]
+
+[ext_resource type="PackedScene" uid="uid://htd5k34jlfqn" path="res://UI/MainMenuButton.tscn" id="1_jm7gt"]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+
+[node name="MainMenuButton" parent="." instance=ExtResource("1_jm7gt")]
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="MainMenuButton" to="MainMenuButton" method="_on_pressed"]
