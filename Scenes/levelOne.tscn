@@ -22,7 +22,7 @@ texture = ExtResource("1_pwilp")
 [node name="TargetProto" parent="." instance=ExtResource("3_6kbem")]
 position = Vector2(1026, 497)
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="BackgroundMusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_chn38")
 autoplay = true
 
