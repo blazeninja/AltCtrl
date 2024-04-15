@@ -1,8 +1,10 @@
 [gd_scene load_steps=9 format=3 uid="uid://cwfifm62giko"]
 
-[ext_resource type="Texture2D" uid="uid://bte70gggrtx0t" path="res://Assets/skyBackground.png" id="1_pwilp"]
+[ext_resource type="Script" path="res://Scenes/levelOne.gd" id="1_ovhix"]
+[ext_resource type="Texture2D" uid="uid://bte70gggrtx0t" path="res://assets/skyBackground.png" id="1_pwilp"]
 [ext_resource type="PackedScene" uid="uid://htd5k34jlfqn" path="res://UI/MainMenuButton.tscn" id="1_qt8u3"]
 [ext_resource type="PackedScene" uid="uid://cc40kl8hrsq8s" path="res://UI/score.tscn" id="2_65862"]
+[ext_resource type="PackedScene" uid="uid://bwgcbmw2cadhs" path="res://Scenes/clouds.tscn" id="2_xluy4"]
 [ext_resource type="PackedScene" uid="uid://k2t0wtg1cvek" path="res://UI/target_proto.tscn" id="3_6kbem"]
 [ext_resource type="PackedScene" uid="uid://ia4jdct8dy5q" path="res://UI/arrowCount.tscn" id="4_tj83e"]
 [ext_resource type="AudioStream" uid="uid://cj7fter5nyt10" path="res://Audio/Archery_BGMusic.ogg" id="5_chn38"]
@@ -10,6 +12,8 @@
 [ext_resource type="PackedScene" uid="uid://b7kr24ktgmqsl" path="res://Scenes/player.tscn" id="6_733qu"]
 
 [node name="LevelOne" type="Node2D"]
+script = ExtResource("1_ovhix")
+cloudscene = ExtResource("2_xluy4")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(576, 324)
