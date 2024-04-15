@@ -29,7 +29,7 @@ stream = ExtResource("5_chn38")
 autoplay = true
 
 [node name="player" parent="." instance=ExtResource("6_733qu")]
-position = Vector2(127, 524)
+position = Vector2(510, 709)
 
 [connection signal="pressed" from="CanvasLayer/MainMenuButton" to="CanvasLayer/MainMenuButton" method="_on_pressed"]
 [connection signal="area_entered" from="TargetProto" to="player" method="_on_target_proto_area_entered"]
