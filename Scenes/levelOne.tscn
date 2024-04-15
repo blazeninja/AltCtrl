@@ -1,7 +1,7 @@
 [gd_scene load_steps=11 format=3 uid="uid://cwfifm62giko"]
 
 [ext_resource type="Script" path="res://Scripts/levelOne.gd" id="1_ovhix"]
-[ext_resource type="Texture2D" uid="uid://bte70gggrtx0t" path="res://assets/skyBackground.png" id="1_pwilp"]
+[ext_resource type="Texture2D" uid="uid://bte70gggrtx0t" path="res://Assets/skyBackground.png" id="1_pwilp"]
 [ext_resource type="PackedScene" uid="uid://htd5k34jlfqn" path="res://UI/MainMenuButton.tscn" id="1_qt8u3"]
 [ext_resource type="PackedScene" uid="uid://cc40kl8hrsq8s" path="res://UI/score.tscn" id="2_65862"]
 [ext_resource type="PackedScene" uid="uid://bwgcbmw2cadhs" path="res://Scenes/clouds.tscn" id="2_xluy4"]
