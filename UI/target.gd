@@ -5,8 +5,8 @@ extends Area2D
 func _ready():
 	var tween = create_tween()
 	
-	tween.tween_property(self,"position",Vector2(100,0), 5)
-	tween.tween_property(self,"position",Vector2(1050,570), 5)
+	tween.tween_property(self,"position",Vector2(100,0), 10)
+	tween.tween_property(self,"position",Vector2(1050,570), 10)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
