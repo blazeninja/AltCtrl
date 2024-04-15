@@ -31,7 +31,6 @@ func _physics_process(delta):
 		arrow_instance.global_position = $Marker2D.global_position
 		arrow_instance.time_left = $Timer.time_left
 		add_child(arrow_instance)
-		arrow_count -= 1
 		arrow_shot_sound.play()
 
 		Global.arrowCount -= 1
