@@ -7,8 +7,7 @@
 size = Vector2(2, 2)
 
 [node name="arrow" type="Area2D"]
-scale = Vector2(3, 3)
-collision_layer = 255
+scale = Vector2(5, 5)
 script = ExtResource("1_gxpdl")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
