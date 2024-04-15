@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://n8qiwcw063vn"]
+[gd_scene load_steps=8 format=3 uid="uid://n8qiwcw063vn"]
 
 [ext_resource type="Texture2D" uid="uid://bte70gggrtx0t" path="res://Assets/skyBackground.png" id="1_y1t4r"]
 [ext_resource type="Texture2D" uid="uid://dn4mif1wp1gwo" path="res://Assets/transparent black square.png" id="2_2g5ie"]
@@ -6,6 +6,7 @@
 [ext_resource type="FontFile" uid="uid://tjx06dtmqupc" path="res://fonts/atypewriterforme/ATypewriterForMe.ttf" id="3_xn8ir"]
 [ext_resource type="Script" path="res://scripts/Lore Text.gd" id="4_stopf"]
 [ext_resource type="Script" path="res://Scripts/StartButton.gd" id="6_ccq5q"]
+[ext_resource type="AudioStream" uid="uid://clfrbrob3psec" path="res://Audio/archeryclick.ogg" id="7_slvj2"]
 
 [node name="Lore" type="Node2D"]
 
@@ -34,7 +35,7 @@ text = "Sample Text Sample Text Sample Text"
 horizontal_alignment = 1
 script = ExtResource("4_stopf")
 
-[node name="Button" type="Button" parent="."]
+[node name="Button" type="Button" parent="." node_paths=PackedStringArray("buttonsound", "buttondelay")]
 offset_left = 371.0
 offset_top = 523.0
 offset_right = 764.0
@@ -43,7 +44,15 @@ theme_override_fonts/font = ExtResource("3_teyy8")
 theme_override_font_sizes/font_size = 45
 text = "START TRAINING"
 script = ExtResource("6_ccq5q")
+buttonsound = NodePath("../AudioStreamPlayer")
+buttondelay = NodePath("../buttondelay")
 
-[node name="Timer" type="Timer" parent="."]
+[node name="buttondelay" type="Timer" parent="."]
+wait_time = 0.579
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_slvj2")
+
+[connection signal="pressed" from="Button" to="Lore Text" method="_on_button_pressed"]
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
+[connection signal="timeout" from="buttondelay" to="Button" method="_on_buttondelay_timeout"]

@@ -13,4 +13,4 @@ func _on_start_button_pressed():
 	buttondelay.start()
 
 func _on_buttondelay_timeout():
-	get_tree().change_scene_to_file("res://Scenes/levelOne.tscn")
+	get_tree().change_scene_to_file("res://Scenes/Lore.tscn")
