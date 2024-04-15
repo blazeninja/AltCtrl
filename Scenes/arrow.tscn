@@ -27,4 +27,7 @@ shape = SubResource("RectangleShape2D_ophae")
 position = Vector2(2.38419e-07, 0.6)
 scale = Vector2(0.11, 0.12)
 
+[node name="Timer" type="Timer" parent="."]
+
 [connection signal="screen_exited" from="VisibleOnScreenEnabler2D" to="." method="_on_visible_on_screen_enabler_2d_screen_exited"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

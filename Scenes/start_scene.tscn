@@ -3,10 +3,10 @@
 [ext_resource type="Script" path="res://Scripts/start_scene.gd" id="1_7ob2q"]
 [ext_resource type="FontFile" uid="uid://63jcwrinvwcn" path="res://fonts/Permanent_Marker/PermanentMarker-Regular.ttf" id="1_ok5um"]
 [ext_resource type="Texture2D" uid="uid://gom4p68b4o8f" path="res://Assets/mainmenu.png" id="2_u5iag"]
-[ext_resource type="Texture2D" uid="uid://d1hb7wdyy5npo" path="res://Assets/title.png" id="3_d6mtd"]
 [ext_resource type="Texture2D" uid="uid://tc7djm8yd60j" path="res://Assets/play.png" id="5_5mdoe"]
 [ext_resource type="Texture2D" uid="uid://bordrxy215xxo" path="res://Assets/quit.png" id="6_dlpou"]
 [ext_resource type="AudioStream" uid="uid://clfrbrob3psec" path="res://Audio/archeryclick.ogg" id="7_5o1j6"]
+[ext_resource type="FontFile" uid="uid://tjx06dtmqupc" path="res://fonts/atypewriterforme/ATypewriterForMe.ttf" id="7_fn04b"]
 
 [node name="StartScene" type="Node2D" node_paths=PackedStringArray("buttonsound", "buttondelay")]
 script = ExtResource("1_7ob2q")
@@ -24,40 +24,35 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="Sprite2D" type="Sprite2D" parent="UI"]
-position = Vector2(297, 120)
-scale = Vector2(6.39362, 6.39362)
-texture = ExtResource("3_d6mtd")
-
 [node name="StartButton" type="Button" parent="UI"]
 layout_mode = 0
-offset_left = 312.0
-offset_top = 229.0
-offset_right = 503.0
-offset_bottom = 300.0
+offset_left = 427.0
+offset_top = 370.0
+offset_right = 698.0
+offset_bottom = 500.0
 theme_override_colors/font_color = Color(1, 1, 0, 1)
 theme_override_colors/font_hover_color = Color(1, 0, 0, 1)
 theme_override_fonts/font = ExtResource("1_ok5um")
 theme_override_font_sizes/font_size = 40
 
 [node name="Sprite2D" type="Sprite2D" parent="UI/StartButton"]
-position = Vector2(93, 43)
+position = Vector2(133, 71)
 scale = Vector2(3.89362, 3.89362)
 texture = ExtResource("5_5mdoe")
 
 [node name="QuitButton" type="Button" parent="UI"]
 layout_mode = 0
-offset_left = 169.0
-offset_top = 484.0
-offset_right = 351.0
-offset_bottom = 550.0
+offset_left = 429.0
+offset_top = 509.0
+offset_right = 695.0
+offset_bottom = 626.0
 theme_override_colors/font_color = Color(1, 1, 0, 1)
 theme_override_colors/font_hover_color = Color(1, 0, 0, 1)
 theme_override_fonts/font = ExtResource("1_ok5um")
 theme_override_font_sizes/font_size = 40
 
 [node name="Sprite2D" type="Sprite2D" parent="UI/QuitButton"]
-position = Vector2(87, 29)
+position = Vector2(126, 50)
 scale = Vector2(3.81383, 3.81383)
 texture = ExtResource("6_dlpou")
 
@@ -66,6 +61,33 @@ wait_time = 0.504
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("7_5o1j6")
+
+[node name="Archer" type="Label" parent="."]
+offset_left = 43.0
+offset_top = 16.0
+offset_right = 362.0
+offset_bottom = 151.0
+theme_override_fonts/font = ExtResource("1_ok5um")
+theme_override_font_sizes/font_size = 94
+text = "Archer"
+
+[node name="Training" type="Label" parent="."]
+offset_left = 70.0
+offset_top = 77.0
+offset_right = 585.0
+offset_bottom = 255.0
+theme_override_fonts/font = ExtResource("1_ok5um")
+theme_override_font_sizes/font_size = 124
+text = "Training"
+
+[node name="In" type="Label" parent="."]
+offset_left = 389.0
+offset_top = 60.0
+offset_right = 469.0
+offset_bottom = 142.0
+theme_override_fonts/font = ExtResource("7_fn04b")
+theme_override_font_sizes/font_size = 72
+text = "in"
 
 [connection signal="pressed" from="UI/StartButton" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="UI/QuitButton" to="." method="_on_quit_button_pressed"]
