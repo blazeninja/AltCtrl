@@ -26,6 +26,4 @@ shape = SubResource("RectangleShape2D_ophae")
 position = Vector2(2.38419e-07, 0.6)
 scale = Vector2(0.11, 0.12)
 
-[connection signal="area_entered" from="." to="." method="_on_area_entered"]
-[connection signal="area_shape_entered" from="." to="." method="_on_area_shape_entered"]
 [connection signal="screen_exited" from="VisibleOnScreenEnabler2D" to="." method="_on_visible_on_screen_enabler_2d_screen_exited"]
