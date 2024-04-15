@@ -4,13 +4,13 @@
 [ext_resource type="Script" path="res://Scripts/Score.gd" id="2_b8caq"]
 
 [node name="Score" type="Label"]
-offset_left = 27.0
-offset_top = 25.0
-offset_right = 191.0
-offset_bottom = 83.0
+offset_left = 31.0
+offset_top = 569.0
+offset_right = 293.0
+offset_bottom = 627.0
 theme_override_colors/font_color = Color(0.996078, 0.996078, 0.996078, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("1_a6s2b")
 theme_override_font_sizes/font_size = 40
-text = "Score: 0"
+text = "Arrows:"
 script = ExtResource("2_b8caq")

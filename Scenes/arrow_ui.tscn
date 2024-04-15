@@ -1,3 +1,11 @@
-[gd_scene format=3 uid="uid://qxu2ihbjb3sv"]
+[gd_scene load_steps=2 format=3 uid="uid://qxu2ihbjb3sv"]
+
+[ext_resource type="PackedScene" uid="uid://cc40kl8hrsq8s" path="res://UI/score.tscn" id="1_4yoat"]
 
 [node name="ArrowUi" type="Node2D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Arrows" parent="CanvasLayer" instance=ExtResource("1_4yoat")]
+offset_top = 575.0
+offset_bottom = 633.0
