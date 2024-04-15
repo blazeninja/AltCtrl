@@ -8,6 +8,7 @@ var bow_cooldown = true
 var arrow = preload("res://Scenes/arrow.tscn")
 var arrow_count = 10
 
+@warning_ignore("unused_parameter")
 func _physics_process(delta):
 	
 	#Arrow shooting script
@@ -30,7 +31,7 @@ func _physics_process(delta):
 		
 		#Update UI
 		var arrow_label = get_node("/root/LevelOne/CanvasLayer/Arrows")
-		arrow_label.text = arrow_count.to_string()
+		arrow_label.text = str(arrow_count)
 		
 		print($Timer.time_left)
 

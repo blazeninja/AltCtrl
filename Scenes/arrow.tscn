@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://Scripts/arrow.gd" id="1_gxpdl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ophae"]
-size = Vector2(19.6, 12)
+size = Vector2(2, 2)
 
 [node name="arrow" type="Area2D"]
 scale = Vector2(3, 3)
@@ -20,13 +20,11 @@ region_enabled = true
 region_rect = Rect2(16.4482, 33.7, 13.6955, 22.7819)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-7.62939e-07, 0.6)
-scale = Vector2(1, 1)
+position = Vector2(0, 0.6)
 shape = SubResource("RectangleShape2D_ophae")
 
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="."]
 position = Vector2(2.38419e-07, 0.6)
 scale = Vector2(0.11, 0.12)
 
-[connection signal="area_entered" from="." to="." method="_on_area_entered"]
 [connection signal="screen_exited" from="VisibleOnScreenEnabler2D" to="." method="_on_visible_on_screen_enabler_2d_screen_exited"]
