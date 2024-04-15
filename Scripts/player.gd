@@ -7,6 +7,8 @@ var bow_equipped = true
 var bow_cooldown = true
 var arrow = preload("res://Scenes/arrow.tscn")
 var arrow_count = 10
+@export var arrow_shot_sound: AudioStreamPlayer
+@export var bow_draw_sound: AudioStreamPlayer
 
 @warning_ignore("unused_parameter")
 func _physics_process(delta):
@@ -20,6 +22,7 @@ func _physics_process(delta):
 	
 	if Input.is_action_just_pressed("shoot_arrow"):
 		$Timer.start(1)
+		bow_draw_sound.play()
 	
 	if Input.is_action_just_released("shoot_arrow") and bow_equipped and bow_cooldown and arrow_count >= 1:
 		bow_cooldown = false
@@ -29,6 +32,7 @@ func _physics_process(delta):
 		arrow_instance.time_left = $Timer.time_left
 		add_child(arrow_instance)
 		arrow_count -= 1
+		arrow_shot_sound.play()
 		
 		#Update UI
 		var arrow_label = get_node("/root/LevelOne/CanvasLayer/Arrows")
