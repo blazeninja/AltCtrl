@@ -28,6 +28,10 @@ func _physics_process(delta):
 		add_child(arrow_instance)
 		arrow_count -= 1
 		
+		#Update UI
+		var arrow_label = get_node("/root/LevelOne/CanvasLayer/Arrows")
+		arrow_label.text = arrow_count.to_string()
+		
 		print($Timer.time_left)
 
 		await get_tree().create_timer(0.4).timeout
