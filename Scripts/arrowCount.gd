@@ -5,5 +5,5 @@ func _ready():
 
 
 func _process(delta):
-	self.text = str(Global.arrowCount)
+	self.text = "Arrows: " + str(Global.arrowCount)
 	pass
