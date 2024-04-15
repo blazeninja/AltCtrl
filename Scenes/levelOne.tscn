@@ -32,3 +32,4 @@ autoplay = true
 position = Vector2(127, 524)
 
 [connection signal="pressed" from="CanvasLayer/MainMenuButton" to="CanvasLayer/MainMenuButton" method="_on_pressed"]
+[connection signal="area_entered" from="TargetProto" to="player" method="_on_target_proto_area_entered"]
