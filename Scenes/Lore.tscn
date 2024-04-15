@@ -1,0 +1,49 @@
+[gd_scene load_steps=7 format=3 uid="uid://n8qiwcw063vn"]
+
+[ext_resource type="Texture2D" uid="uid://bte70gggrtx0t" path="res://Assets/skyBackground.png" id="1_y1t4r"]
+[ext_resource type="Texture2D" uid="uid://y1afavowegxb" path="res://Assets/transparent black square.png" id="2_2g5ie"]
+[ext_resource type="Script" path="res://Scenes/Lore Text.gd" id="3_gmebg"]
+[ext_resource type="FontFile" uid="uid://63jcwrinvwcn" path="res://fonts/Permanent_Marker/PermanentMarker-Regular.ttf" id="3_teyy8"]
+[ext_resource type="FontFile" uid="uid://dpm0yeog0q7sf" path="res://fonts/atypewriterforme/ATypewriterForMe.ttf" id="3_xn8ir"]
+[ext_resource type="Script" path="res://Scenes/StartButton.gd" id="6_ccq5q"]
+
+[node name="Lore" type="Node2D"]
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(576, 324)
+scale = Vector2(2.4, 2.4)
+texture = ExtResource("1_y1t4r")
+
+[node name="Text Background" type="Sprite2D" parent="."]
+position = Vector2(580, 324)
+scale = Vector2(13.0938, 10.1406)
+texture = ExtResource("2_2g5ie")
+
+[node name="Lore Text" type="Label" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 190.0
+offset_top = 130.0
+offset_right = 961.0
+offset_bottom = 323.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("3_xn8ir")
+theme_override_font_sizes/font_size = 30
+text = "Sample Text Sample Text Sample Text"
+horizontal_alignment = 1
+script = ExtResource("3_gmebg")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 371.0
+offset_top = 523.0
+offset_right = 764.0
+offset_bottom = 596.0
+theme_override_fonts/font = ExtResource("3_teyy8")
+theme_override_font_sizes/font_size = 45
+text = "START TRAINING"
+script = ExtResource("6_ccq5q")
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
