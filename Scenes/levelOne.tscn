@@ -1,6 +1,6 @@
-[gd_scene load_steps=9 format=3 uid="uid://cwfifm62giko"]
+[gd_scene load_steps=11 format=3 uid="uid://cwfifm62giko"]
 
-[ext_resource type="Script" path="res://Scenes/levelOne.gd" id="1_ovhix"]
+[ext_resource type="Script" path="res://Scripts/levelOne.gd" id="1_ovhix"]
 [ext_resource type="Texture2D" uid="uid://bte70gggrtx0t" path="res://assets/skyBackground.png" id="1_pwilp"]
 [ext_resource type="PackedScene" uid="uid://htd5k34jlfqn" path="res://UI/MainMenuButton.tscn" id="1_qt8u3"]
 [ext_resource type="PackedScene" uid="uid://cc40kl8hrsq8s" path="res://UI/score.tscn" id="2_65862"]
@@ -26,6 +26,7 @@ texture = ExtResource("1_pwilp")
 metadata/_edit_use_anchors_ = true
 
 [node name="Score" parent="." instance=ExtResource("2_65862")]
+z_index = 1
 offset_left = 24.0
 offset_top = 16.0
 offset_right = 286.0
@@ -33,6 +34,7 @@ offset_bottom = 74.0
 text = "Score: 0"
 
 [node name="arrowCount" parent="." instance=ExtResource("4_tj83e")]
+z_index = 1
 offset_left = 22.0
 offset_top = 86.0
 offset_right = 265.0
@@ -43,6 +45,7 @@ theme_override_font_sizes/font_size = 32
 text = "Arrows: 10"
 
 [node name="TargetProto" parent="." instance=ExtResource("3_6kbem")]
+z_index = 1
 position = Vector2(1026, 497)
 
 [node name="BackgroundMusic" type="AudioStreamPlayer" parent="."]
@@ -52,5 +55,9 @@ autoplay = true
 [node name="player" parent="." instance=ExtResource("6_733qu")]
 position = Vector2(510, 709)
 
+[node name="cloudtimer" type="Timer" parent="."]
+wait_time = 3.0
+
 [connection signal="pressed" from="CanvasLayer/MainMenuButton" to="CanvasLayer/MainMenuButton" method="_on_pressed"]
 [connection signal="area_entered" from="TargetProto" to="player" method="_on_target_proto_area_entered"]
+[connection signal="timeout" from="cloudtimer" to="." method="_on_cloudtimer_timeout"]
