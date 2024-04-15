@@ -1,10 +1,12 @@
-[gd_scene load_steps=7 format=3 uid="uid://cwfifm62giko"]
+[gd_scene load_steps=9 format=3 uid="uid://cwfifm62giko"]
 
 [ext_resource type="Texture2D" uid="uid://bte70gggrtx0t" path="res://Assets/skyBackground.png" id="1_pwilp"]
 [ext_resource type="PackedScene" uid="uid://htd5k34jlfqn" path="res://UI/MainMenuButton.tscn" id="1_qt8u3"]
 [ext_resource type="PackedScene" uid="uid://cc40kl8hrsq8s" path="res://UI/score.tscn" id="2_65862"]
 [ext_resource type="PackedScene" uid="uid://k2t0wtg1cvek" path="res://UI/target_proto.tscn" id="3_6kbem"]
+[ext_resource type="PackedScene" uid="uid://ia4jdct8dy5q" path="res://UI/arrowCount.tscn" id="4_tj83e"]
 [ext_resource type="AudioStream" uid="uid://cj7fter5nyt10" path="res://Audio/Archery_BGMusic.ogg" id="5_chn38"]
+[ext_resource type="FontFile" uid="uid://63jcwrinvwcn" path="res://fonts/Permanent_Marker/PermanentMarker-Regular.ttf" id="5_onkwp"]
 [ext_resource type="PackedScene" uid="uid://b7kr24ktgmqsl" path="res://Scenes/player.tscn" id="6_733qu"]
 
 [node name="LevelOne" type="Node2D"]
@@ -25,6 +27,16 @@ offset_top = 16.0
 offset_right = 286.0
 offset_bottom = 74.0
 text = "Score: 0"
+
+[node name="arrowCount" parent="." instance=ExtResource("4_tj83e")]
+offset_left = 22.0
+offset_top = 86.0
+offset_right = 265.0
+offset_bottom = 109.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_onkwp")
+theme_override_font_sizes/font_size = 32
+text = "Arrows: 10"
 
 [node name="TargetProto" parent="." instance=ExtResource("3_6kbem")]
 position = Vector2(1026, 497)

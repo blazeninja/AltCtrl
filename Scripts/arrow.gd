@@ -2,6 +2,7 @@ extends Area2D
 
 
 var speed = 500
+var time_left = null
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -10,9 +11,12 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	position += (Vector2.RIGHT*speed).rotated(rotation) * delta
-
+	time_left = time_left + delta
+	if time_left <= 0:
+		$Timer.start()
 	
+	position += (Vector2.RIGHT*speed).rotated(rotation) * delta
+	print(time_left)
 
 func _on_visible_on_screen_enabler_2d_screen_exited():
 	queue_free()

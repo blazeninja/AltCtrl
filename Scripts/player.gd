@@ -26,12 +26,13 @@ func _physics_process(delta):
 		var arrow_instance = arrow.instantiate()
 		arrow_instance.rotation = $Marker2D.rotation
 		arrow_instance.global_position = $Marker2D.global_position
+		arrow_instance.time_left = $Timer.time_left
 		add_child(arrow_instance)
 		arrow_count -= 1
 		
 		#Update UI
 		var arrow_label = get_node("/root/LevelOne/CanvasLayer/Arrows")
-		arrow_label.text = str(arrow_count)
+		#arrow_label.text = str(arrow_count)
 		
 		print($Timer.time_left)
 
