@@ -17,7 +17,6 @@ func _process(delta):
 func _on_input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton and event.pressed:
 		var distance_from_center = position.distance_to(event.position)
-		Global.arrowCount -= 1
 		
 		if distance_from_center <= 15:
 			Global.score += 10

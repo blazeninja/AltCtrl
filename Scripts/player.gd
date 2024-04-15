@@ -33,6 +33,10 @@ func _physics_process(delta):
 		add_child(arrow_instance)
 		arrow_count -= 1
 		arrow_shot_sound.play()
+
+		Global.arrowCount -= 1
+		arrow_count-= 1
+
 		
 		#Update UI
 		var arrow_label = get_node("/root/LevelOne/CanvasLayer/Arrows")

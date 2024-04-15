@@ -11,12 +11,12 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	time_left = time_left + delta
+	time_left = time_left - delta
 	if time_left <= 0:
 		$Timer.start()
+	else:
+		position += (Vector2.RIGHT*speed).rotated(rotation) * delta
 	
-	position += (Vector2.RIGHT*speed).rotated(rotation) * delta
-	print(time_left)
 
 func _on_visible_on_screen_enabler_2d_screen_exited():
 	queue_free()
