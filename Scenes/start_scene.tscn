@@ -42,7 +42,7 @@ texture = ExtResource("5_5mdoe")
 
 [node name="QuitButton" type="Button" parent="UI"]
 layout_mode = 0
-offset_left = 168.0
+offset_left = 163.0
 offset_top = 427.0
 offset_right = 350.0
 offset_bottom = 493.0
@@ -81,10 +81,10 @@ theme_override_font_sizes/font_size = 94
 text = "Training"
 
 [node name="In" type="Label" parent="."]
-offset_left = 376.0
-offset_top = 56.0
-offset_right = 456.0
-offset_bottom = 138.0
+offset_left = 389.0
+offset_top = 60.0
+offset_right = 469.0
+offset_bottom = 142.0
 theme_override_fonts/font = ExtResource("7_fn04b")
 theme_override_font_sizes/font_size = 72
 text = "in"
