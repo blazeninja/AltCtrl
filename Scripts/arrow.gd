@@ -16,13 +16,15 @@ func _process(delta):
 		$Timer.start(.4)
 	else:
 		position += (Vector2.RIGHT*speed).rotated(rotation) * delta
+		$Timer.start(.4)
 
 func _on_visible_on_screen_enabler_2d_screen_exited():
 	queue_free()
 
 func _on_area_entered(area):
-	queue_free()
+	#queue_free()
+	pass
 
 
 func _on_timer_timeout():
-	queue_free()
+	self.queue_free()

@@ -20,7 +20,7 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("quit"):
 		get_tree().quit()
 	
-	if Input.is_action_just_pressed("shoot_arrow"):
+	if Input.is_action_just_pressed("shoot_arrow") and arrow_count >= 1:
 		$Timer.start(1)
 		bow_draw_sound.play()
 	
@@ -38,7 +38,7 @@ func _physics_process(delta):
 
 		
 		#Update UI
-		var arrow_label = get_node("/root/LevelOne/CanvasLayer/Arrows")
+		#var arrow_label = get_node("/root/LevelOne/CanvasLayer/Arrows")
 		#arrow_label.text = str(arrow_count)
 		
 		print($Timer.time_left)
