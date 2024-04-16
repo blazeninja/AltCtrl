@@ -17,7 +17,7 @@ func _physics_process(_delta):
 	if Input.is_action_just_pressed("quit"):
 		get_tree().quit()
 	
-	if Input.is_action_just_pressed("shoot_arrow"):
+	if Input.is_action_just_pressed("shoot_arrow") and arrow_count >= 1:
 		$Timer.start(1)
 		bow_draw_sound.play()
 	

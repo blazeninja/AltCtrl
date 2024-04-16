@@ -22,7 +22,7 @@ position = Vector2(-0.5, -1)
 shape = SubResource("RectangleShape2D_8tdip")
 
 [node name="Marker2D" type="Marker2D" parent="."]
-position = Vector2(1, -62)
+position = Vector2(0, -62)
 
 [node name="Timer" type="Timer" parent="."]
 
