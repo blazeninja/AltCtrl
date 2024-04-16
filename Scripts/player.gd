@@ -1,6 +1,5 @@
 extends CharacterBody2D
 
-
 const SPEED = 300.0
 
 var bow_equipped = true
@@ -10,9 +9,7 @@ var arrow_count = 10
 @export var arrow_shot_sound: AudioStreamPlayer
 @export var bow_draw_sound: AudioStreamPlayer
 
-@warning_ignore("unused_parameter")
-func _physics_process(delta):
-	
+func _physics_process(_delta):
 	#Arrow shooting script
 	var mouse_pos = get_global_mouse_position()
 	$Marker2D.look_at(mouse_pos)
@@ -34,11 +31,11 @@ func _physics_process(delta):
 		arrow_shot_sound.play()
 
 		Global.arrowCount -= 1
-		arrow_count-= 1
+		arrow_count -= 1
 
 		
 		#Update UI
-		var arrow_label = get_node("/root/LevelOne/CanvasLayer/Arrows")
+		#var arrow_label = get_node("/root/LevelOne/CanvasLayer/Arrows")
 		#arrow_label.text = str(arrow_count)
 		
 		print($Timer.time_left)

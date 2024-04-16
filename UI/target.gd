@@ -1,20 +1,11 @@
 extends Area2D
 
-
-# Called when the node enters the scene tree for the first time.
 func _ready():
 	var tween = create_tween()
-	
 	tween.tween_property(self,"position",Vector2(100,0), 10)
 	tween.tween_property(self,"position",Vector2(1050,570), 10)
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
-
-
-func _on_input_event(viewport, event, shape_idx):
+func _on_input_event(_viewport, event, _shape_idx):
 	if event is InputEventMouseButton and event.pressed:
 		var distance_from_center = position.distance_to(event.position)
 		
