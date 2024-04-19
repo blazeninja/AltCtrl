@@ -42,3 +42,18 @@ func _physics_process(_delta):
 
 		await get_tree().create_timer(0.4).timeout
 		bow_cooldown = true
+
+
+func _on_target_proto_area_entered(area):
+	var distance_from_center = position.distance_to(arrow)
+		
+	if distance_from_center <= 15:
+		Global.score += 10
+	if distance_from_center >= 15 and distance_from_center <= 31:
+		Global.score += 5
+	if distance_from_center >= 31 and distance_from_center <= 55:
+		Global.score += 3
+	if distance_from_center >= 55 and distance_from_center <= 80:
+		Global.score += 2
+	if distance_from_center >= 80 and distance_from_center <= 98:
+		Global.score += 1

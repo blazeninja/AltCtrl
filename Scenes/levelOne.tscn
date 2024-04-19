@@ -45,7 +45,7 @@ text = "Arrows: 10"
 
 [node name="TargetProto" parent="." instance=ExtResource("3_6kbem")]
 z_index = 1
-position = Vector2(1026, 497)
+position = Vector2(565, 341)
 
 [node name="BackgroundMusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_chn38")
