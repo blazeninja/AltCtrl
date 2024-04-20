@@ -8,6 +8,7 @@ var arrow = preload("res://Scenes/arrow.tscn")
 var arrow_count = 10
 @export var arrow_shot_sound: AudioStreamPlayer
 @export var bow_draw_sound: AudioStreamPlayer
+var arrow_instance = arrow.instantiate()
 
 func _physics_process(_delta):
 	#Arrow shooting script
@@ -23,7 +24,6 @@ func _physics_process(_delta):
 	
 	if Input.is_action_just_released("shoot_arrow") and bow_equipped and bow_cooldown and arrow_count >= 1:
 		bow_cooldown = false
-		var arrow_instance = arrow.instantiate()
 		arrow_instance.rotation = $Marker2D.rotation
 		arrow_instance.global_position = $Marker2D.global_position
 		arrow_instance.time_left = $Timer.time_left
@@ -45,7 +45,7 @@ func _physics_process(_delta):
 
 
 func _on_target_proto_area_entered(area):
-	var distance_from_center = position.distance_to(arrow)
+	var distance_from_center = position.distance_to(arrow_instance.position)
 		
 	if distance_from_center <= 15:
 		Global.score += 10

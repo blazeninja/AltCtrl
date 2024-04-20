@@ -8,7 +8,7 @@ func _ready():
 
 #func _on_input_event(_viewport, event, _shape_idx):
 	#if event is InputEventMouseButton and event.pressed:
-		##var distance_from_center = position.distance_to(arrow)
+		##var distance_from_center = position.distance_to(event.position)
 		##
 		##if distance_from_center <= 15:
 			##Global.score += 10
