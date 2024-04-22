@@ -1,0 +1,33 @@
+[gd_scene load_steps=6 format=3 uid="uid://b7kr24ktgmqsl"]
+
+[ext_resource type="Texture2D" uid="uid://dy1gh874v6yd8" path="res://icon.svg" id="1_3k8cj"]
+[ext_resource type="Script" path="res://Scripts/player.gd" id="1_n0a2r"]
+[ext_resource type="AudioStream" uid="uid://uf7agf1bt226" path="res://Audio/Arrow_Shot.wav" id="3_07qk7"]
+[ext_resource type="AudioStream" uid="uid://cbcy45y07x0au" path="res://Audio/Bow_Draw.wav" id="4_k1h06"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8tdip"]
+size = Vector2(119, 122)
+
+[node name="player" type="CharacterBody2D" node_paths=PackedStringArray("arrow_shot_sound", "bow_draw_sound")]
+script = ExtResource("1_n0a2r")
+arrow_shot_sound = NodePath("ArrowShot")
+bow_draw_sound = NodePath("BowDraw")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("1_3k8cj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, -1)
+shape = SubResource("RectangleShape2D_8tdip")
+
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(0, -62)
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="ArrowShot" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_07qk7")
+
+[node name="BowDraw" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_k1h06")
