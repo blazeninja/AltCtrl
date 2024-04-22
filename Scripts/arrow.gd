@@ -16,7 +16,7 @@ func _process(delta):
 		$Timer.start(.4)
 	else:
 		position += (Vector2.RIGHT*speed).rotated(rotation) * delta
-		await get_tree().create_timer(1.4).timeout
+		await get_tree().create_timer(2).timeout
 		queue_free()
 
 func _on_visible_on_screen_enabler_2d_screen_exited():

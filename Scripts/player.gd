@@ -8,7 +8,6 @@ var arrow = preload("res://Scenes/arrow.tscn")
 var arrow_count = 10
 @export var arrow_shot_sound: AudioStreamPlayer
 @export var bow_draw_sound: AudioStreamPlayer
-var arrow_instance = arrow.instantiate()
 
 func _physics_process(_delta):
 	#Arrow shooting script
@@ -24,36 +23,41 @@ func _physics_process(_delta):
 	
 	if Input.is_action_just_released("shoot_arrow") and bow_equipped and bow_cooldown and arrow_count >= 1:
 		bow_cooldown = false
+		var arrow_instance = arrow.instantiate()
 		arrow_instance.rotation = $Marker2D.rotation
 		arrow_instance.global_position = $Marker2D.global_position
 		arrow_instance.time_left = $Timer.time_left
 		add_child(arrow_instance)
+		
 		arrow_shot_sound.play()
-
+		
 		Global.arrowCount -= 1
 		arrow_count -= 1
+		#print($Timer.time_left)
 
-		
-		#Update UI
-		#var arrow_label = get_node("/root/LevelOne/CanvasLayer/Arrows")
-		#arrow_label.text = str(arrow_count)
-		
-		print($Timer.time_left)
-
-		await get_tree().create_timer(0.4).timeout
+		await get_tree().create_timer(1).timeout
 		bow_cooldown = true
+		var arrow_position = arrow_instance.position
+		target_score(arrow_position)
 
 
-func _on_target_proto_area_entered(area):
-	var distance_from_center = position.distance_to(arrow_instance.position)
-		
-	if distance_from_center <= 15:
+func target_score(arrow_position):
+	var target = get_node("/root/LevelOne/TargetProto")
+	print(target.position)
+	print(arrow_position)
+	
+	var diff = arrow_position - target.position
+	print(diff)
+	var diff_length = diff.length()
+	print(diff_length)
+	
+	if diff_length <= 15:
 		Global.score += 10
-	if distance_from_center >= 15 and distance_from_center <= 31:
+	if diff_length >= 15 and diff_length <= 31:
 		Global.score += 5
-	if distance_from_center >= 31 and distance_from_center <= 55:
+	if diff_length >= 31 and diff_length <= 55:
 		Global.score += 3
-	if distance_from_center >= 55 and distance_from_center <= 80:
+	if diff_length >= 55 and diff_length <= 80:
 		Global.score += 2
-	if distance_from_center >= 80 and distance_from_center <= 98:
+	if diff_length >= 80 and diff_length <= 98:
 		Global.score += 1
