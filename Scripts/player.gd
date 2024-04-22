@@ -42,7 +42,7 @@ func _physics_process(_delta):
 
 
 func target_score(arrow_position):
-	var target = get_node("/root/LevelOne/TargetProto")
+	var target = get_node("/root/LevelThree/TargetProto")
 	print(target.position)
 	print(arrow_position)
 	
@@ -63,7 +63,7 @@ func target_score(arrow_position):
 		Global.score += 1
 
 func small_target_score(arrow_position):
-	var target = get_node("/root/LevelOne/Smalls")
+	var target = get_node("/root/LevelThree/Smalls")
 	print(target.position)
 	print(arrow_position)
 	
