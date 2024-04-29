@@ -52,15 +52,17 @@ text = "Arrows: 10"
 [node name="TargetProto" parent="." instance=ExtResource("3_6kbem")]
 z_index = 1
 position = Vector2(495, 331)
+collision_mask = 3
 
 [node name="BackgroundMusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_chn38")
 autoplay = true
 
 [node name="player" parent="." instance=ExtResource("6_733qu")]
-position = Vector2(510, 709)
+position = Vector2(575, 645)
 
 [node name="wall" type="Area2D" parent="."]
+collision_layer = 2
 
 [node name="bottom" type="CollisionShape2D" parent="wall"]
 position = Vector2(574.5, 650.75)
