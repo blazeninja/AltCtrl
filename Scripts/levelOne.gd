@@ -7,6 +7,7 @@ const cloud_range : int = 200
 var clouds: Array
 @onready var target = $TargetProto
 
+
 func _ready():
 	screen_size = get_window().size
 	clouds.clear()

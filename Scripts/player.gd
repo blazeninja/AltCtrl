@@ -39,7 +39,10 @@ func _physics_process(_delta):
 		bow_cooldown = true
 		var arrow_position = arrow_instance.position
 		target_score(arrow_position)
-		small_target_score(arrow_position)
+		print(get_tree().current_scene.name)
+		
+		if get_tree().get_current_scene().get_name() == "LevelThree":
+			small_target_score(arrow_position)
 
 
 func target_score(arrow_position):
@@ -66,11 +69,10 @@ func target_score(arrow_position):
 		Global.score += 1
 
 func small_target_score(arrow_position):
-	var target = get_tree().get_first_node_in_group("Controller").target2
-	if target != null:
-		print(target.position)
+	var target2 = get_tree().get_first_node_in_group("Controller").target2
+	if target2 != null:
 		print(arrow_position)
-		var diff = arrow_position - target.position
+		var diff = arrow_position - target2.position
 		print(diff)
 		var diff_length = diff.length()
 		print(diff_length)
@@ -82,4 +84,5 @@ func small_target_score(arrow_position):
 			Global.score += 2
 		if diff_length >= 24 and diff_length <= 39:
 			Global.score += 1
-	else: pass
+	else: 
+		if target2 == null: pass
