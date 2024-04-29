@@ -42,7 +42,7 @@ func _physics_process(_delta):
 
 
 func target_score(arrow_position):
-	var target = get_node("/root/LevelThree/TargetProto")
+	var target = get_node("/root/UI/target_proto.tscn")
 	print(target.position)
 	print(arrow_position)
 	

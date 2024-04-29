@@ -1,7 +1,7 @@
-[gd_scene load_steps=11 format=3 uid="uid://cwfifm62giko"]
+[gd_scene load_steps=13 format=3 uid="uid://cwfifm62giko"]
 
 [ext_resource type="Script" path="res://Scripts/levelOne.gd" id="1_ovhix"]
-[ext_resource type="Texture2D" uid="uid://bte70gggrtx0t" path="res://Assets/skyBackground.png" id="1_pwilp"]
+[ext_resource type="Texture2D" uid="uid://bte70gggrtx0t" path="res://assets/skyBackground.png" id="1_pwilp"]
 [ext_resource type="PackedScene" uid="uid://htd5k34jlfqn" path="res://UI/MainMenuButton.tscn" id="1_qt8u3"]
 [ext_resource type="PackedScene" uid="uid://cc40kl8hrsq8s" path="res://UI/score.tscn" id="2_65862"]
 [ext_resource type="PackedScene" uid="uid://bwgcbmw2cadhs" path="res://Scenes/clouds.tscn" id="2_xluy4"]
@@ -10,6 +10,12 @@
 [ext_resource type="AudioStream" uid="uid://cj7fter5nyt10" path="res://Audio/Archery_BGMusic.ogg" id="5_chn38"]
 [ext_resource type="FontFile" uid="uid://63jcwrinvwcn" path="res://fonts/Permanent_Marker/PermanentMarker-Regular.ttf" id="5_onkwp"]
 [ext_resource type="PackedScene" uid="uid://b7kr24ktgmqsl" path="res://Scenes/player.tscn" id="6_733qu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hf0ld"]
+size = Vector2(1109, 29.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f2sca"]
+size = Vector2(47.25, 680)
 
 [node name="LevelOne" type="Node2D"]
 script = ExtResource("1_ovhix")
@@ -45,7 +51,7 @@ text = "Arrows: 10"
 
 [node name="TargetProto" parent="." instance=ExtResource("3_6kbem")]
 z_index = 1
-position = Vector2(565, 341)
+position = Vector2(495, 331)
 
 [node name="BackgroundMusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_chn38")
@@ -54,5 +60,24 @@ autoplay = true
 [node name="player" parent="." instance=ExtResource("6_733qu")]
 position = Vector2(510, 709)
 
+[node name="wall" type="Area2D" parent="."]
+
+[node name="bottom" type="CollisionShape2D" parent="wall"]
+position = Vector2(574.5, 650.75)
+shape = SubResource("RectangleShape2D_hf0ld")
+
+[node name="top" type="CollisionShape2D" parent="wall"]
+position = Vector2(574.5, 0)
+shape = SubResource("RectangleShape2D_hf0ld")
+
+[node name="left" type="CollisionShape2D" parent="wall"]
+position = Vector2(-4.25, 325)
+shape = SubResource("RectangleShape2D_f2sca")
+
+[node name="right" type="CollisionShape2D" parent="wall"]
+position = Vector2(1154, 326)
+shape = SubResource("RectangleShape2D_f2sca")
+
 [connection signal="pressed" from="CanvasLayer/MainMenuButton" to="CanvasLayer/MainMenuButton" method="_on_pressed"]
 [connection signal="area_entered" from="TargetProto" to="TargetProto" method="_on_area_entered"]
+[connection signal="area_entered" from="wall" to="TargetProto" method="_on_wall_area_entered"]

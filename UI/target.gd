@@ -1,10 +1,11 @@
 extends Area2D
 var arrow = preload("res://Scenes/arrow.tscn")
-func _ready():
-	#var tween = create_tween()
-	#tween.tween_property(self,"position",Vector2(100,0), 10)
-	#tween.tween_property(self,"position",Vector2(1050,570), 10)
-	pass
+var speed = Vector2(0, 200)
+var random = RandomNumberGenerator.new()
+
+func _process(delta):
+	position += speed.rotated(rotation)*delta
+	
 
 #func _on_input_event(_viewport, event, _shape_idx):
 	#if event is InputEventMouseButton and event.pressed:
@@ -22,4 +23,10 @@ func _ready():
 			#Global.score += 1
 
 func _on_area_entered(area):
-	print("Hello World")
+	#print("Hello World")
+	pass
+
+
+func _on_wall_area_entered(area):
+	speed = -speed
+	rotation_degrees += random.randi_range(-90, 0)

@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cy434mehmnad"
-path.s3tc="res://.godot/imported/GrassTile.png-e94223aa6a654f3ade1192f5b6c8a178.s3tc.ctex"
+path.s3tc="res://.godot/imported/GrassTile.png-d23bae8d438336670ec679c6d4865c26.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/GrassTile.png"
-dest_files=["res://.godot/imported/GrassTile.png-e94223aa6a654f3ade1192f5b6c8a178.s3tc.ctex"]
+source_file="res://assets/GrassTile.png"
+dest_files=["res://.godot/imported/GrassTile.png-d23bae8d438336670ec679c6d4865c26.s3tc.ctex"]
 
 [params]
 

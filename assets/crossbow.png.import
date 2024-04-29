@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://7grsmgytscay"
-path="res://.godot/imported/cloudOne.png-f6611cff40fcf8befdedec88911ae6f2.ctex"
+uid="uid://dckx7sfkvv5xa"
+path="res://.godot/imported/crossbow.png-af026d4a65364db2adec226301a04682.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/cloudOne.png"
-dest_files=["res://.godot/imported/cloudOne.png-f6611cff40fcf8befdedec88911ae6f2.ctex"]
+source_file="res://assets/crossbow.png"
+dest_files=["res://.godot/imported/crossbow.png-af026d4a65364db2adec226301a04682.ctex"]
 
 [params]
 
