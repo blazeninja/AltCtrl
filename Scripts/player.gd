@@ -65,20 +65,20 @@ func target_score(arrow_position):
 		Global.score += 1
 
 func small_target_score(arrow_position):
-	var target = get_node("/root/LevelThree/Smalls")
-	print(target.position)
-	print(arrow_position)
-	
-	var diff = arrow_position - target.position
-	print(diff)
-	var diff_length = diff.length()
-	print(diff_length)
-	
-	if diff_length <= 3:
-		Global.score += 4
-	if diff_length >= 3 and diff_length <= 12:
-		Global.score += 3
-	if diff_length >= 12 and diff_length <= 24:
-		Global.score += 2
-	if diff_length >= 24 and diff_length <= 39:
-		Global.score += 1
+	var target = get_tree().get_first_node_in_group("Controller").target2
+	if target != null:
+		print(target.position)
+		print(arrow_position)
+		var diff = arrow_position - target.position
+		print(diff)
+		var diff_length = diff.length()
+		print(diff_length)
+		if diff_length <= 3:
+			Global.score += 4
+		if diff_length >= 3 and diff_length <= 12:
+			Global.score += 3
+		if diff_length >= 12 and diff_length <= 24:
+			Global.score += 2
+		if diff_length >= 24 and diff_length <= 39:
+			Global.score += 1
+	else: pass

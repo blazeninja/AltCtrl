@@ -54,7 +54,7 @@ stream = ExtResource("9_lrsra")
 autoplay = true
 
 [node name="player" parent="." instance=ExtResource("10_2gcb3")]
-position = Vector2(510, 709)
+position = Vector2(565, 574)
 
 [connection signal="pressed" from="CanvasLayer/MainMenuButton" to="CanvasLayer/MainMenuButton" method="_on_pressed"]
 [connection signal="area_entered" from="TargetProto" to="TargetProto" method="_on_area_entered"]

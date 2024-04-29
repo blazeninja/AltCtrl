@@ -3,8 +3,8 @@ var arrow = preload("res://Scenes/arrow.tscn")
 var speed = Vector2(0, 200)
 var random = RandomNumberGenerator.new()
 
-func _process(delta):
-	position += speed.rotated(rotation)*delta
+#func _process(delta):
+	#position += speed.rotated(rotation)*delta
 	
 
 #func _on_input_event(_viewport, event, _shape_idx):
@@ -27,6 +27,6 @@ func _on_area_entered(area):
 	pass
 
 
-func _on_wall_area_entered(area):
-	speed = -speed
-	rotation_degrees += random.randi_range(-90, 0)
+#func _on_wall_area_entered(area):
+	#speed = -speed
+	#rotation_degrees += random.randi_range(-90, 0)
