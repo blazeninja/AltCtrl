@@ -11,7 +11,7 @@ var clouds: Array
 func _ready():
 	screen_size = get_window().size
 	clouds.clear()
-	generate_cloud()
+	#generate_cloud()
 	
 func _process(_delta):
 	for cloud in clouds: 
@@ -19,13 +19,13 @@ func _process(_delta):
 		if(cloud.position.x <= -100):
 			cloud.queue_free()
 			clouds.remove_at(0)
-
-func generate_cloud():
-	var cloud = cloudscene.instantiate()
-	cloud.position.x = screen_size.x + cloud_delay
-	cloud.position.y = randi_range(0, 1000)
-	cloud.set_frame(randi_range(0,2))
-	add_child(cloud)
-	clouds.append(cloud)
-	await get_tree().create_timer(cloud_delay).timeout
-	generate_cloud()
+#
+#func generate_cloud():
+	#var cloud = cloudscene.instantiate()
+	#cloud.position.x = screen_size.x + cloud_delay
+	#cloud.position.y = randi_range(0, 1000)
+	#cloud.set_frame(randi_range(0,2))
+	#add_child(cloud)
+	#clouds.append(cloud)
+	#await get_tree().create_timer(cloud_delay).timeout
+	#generate_cloud()
