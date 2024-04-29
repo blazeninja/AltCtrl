@@ -39,6 +39,7 @@ func _physics_process(_delta):
 		bow_cooldown = true
 		var arrow_position = arrow_instance.position
 		target_score(arrow_position)
+		small_target_score(arrow_position)
 
 
 func target_score(arrow_position):
