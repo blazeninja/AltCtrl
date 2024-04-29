@@ -42,7 +42,9 @@ func _physics_process(_delta):
 
 
 func target_score(arrow_position):
-	var target = get_node("/root/LevelOne/TargetProto")
+	var target = get_tree().get_first_node_in_group("Controller").target
+	
+	
 	print(target.position)
 	print(arrow_position)
 	
