@@ -14,6 +14,9 @@ func _ready():
 	generate_cloud()
 	
 func _process(_delta):
+	if Global.score >= 10:
+		get_tree().change_scene_to_file("res://Scenes/levelThree.tscn")
+	
 	for cloud in clouds: 
 		cloud.position.x -= scroll_speed
 		if(cloud.position.x <= -100):
