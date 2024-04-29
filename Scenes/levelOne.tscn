@@ -30,6 +30,15 @@ texture = ExtResource("1_pwilp")
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="MainMenuButton" parent="CanvasLayer" instance=ExtResource("1_qt8u3")]
+anchors_preset = -1
+anchor_left = 0.753
+anchor_top = 0.04
+anchor_right = 0.979
+anchor_bottom = 0.142
+offset_left = -0.456055
+offset_top = 0.079998
+offset_right = 0.192017
+offset_bottom = -0.0160065
 metadata/_edit_use_anchors_ = true
 
 [node name="Score" parent="." instance=ExtResource("2_65862")]
@@ -40,6 +49,9 @@ offset_bottom = 74.0
 text = "Score: 0"
 
 [node name="arrowCount" parent="." instance=ExtResource("4_tj83e")]
+anchor_left = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 offset_left = 22.0
 offset_top = 86.0
 offset_right = 265.0
@@ -62,6 +74,7 @@ autoplay = true
 position = Vector2(498, 582)
 
 [node name="wall" type="Area2D" parent="."]
+visible = false
 collision_layer = 2
 
 [node name="bottom" type="CollisionShape2D" parent="wall"]
