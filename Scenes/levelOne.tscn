@@ -49,6 +49,7 @@ offset_bottom = 74.0
 text = "Score: 0"
 
 [node name="arrowCount" parent="." instance=ExtResource("4_tj83e")]
+anchors_preset = 0
 anchor_left = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
