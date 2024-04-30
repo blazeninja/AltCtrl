@@ -28,6 +28,7 @@ func _physics_process(_delta):
 		arrow_instance.global_position = $Marker2D.global_position
 		arrow_instance.time_left = $Timer.time_left
 		add_child(arrow_instance)
+		var time = arrow_instance.time_left - _delta
 		
 		arrow_shot_sound.play()
 		
@@ -35,7 +36,7 @@ func _physics_process(_delta):
 		arrow_count -= 1
 		#print($Timer.time_left)
 
-		await get_tree().create_timer(1).timeout
+		await get_tree().create_timer(time).timeout
 		bow_cooldown = true
 		var arrow_position = arrow_instance.position
 		target_score(arrow_position)

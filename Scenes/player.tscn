@@ -33,8 +33,10 @@ stream = ExtResource("3_07qk7")
 stream = ExtResource("4_k1h06")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+visible = false
 
 [node name="ProgressBar" type="ProgressBar" parent="CanvasLayer"]
+visible = false
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
