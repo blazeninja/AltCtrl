@@ -30,3 +30,18 @@ stream = ExtResource("3_07qk7")
 
 [node name="BowDraw" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_k1h06")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ProgressBar" type="ProgressBar" parent="CanvasLayer"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -28.0
+offset_top = -32.0
+offset_right = 28.0
+offset_bottom = -5.0
+grow_horizontal = 2
+grow_vertical = 0

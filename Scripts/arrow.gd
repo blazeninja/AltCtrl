@@ -1,5 +1,6 @@
 extends Area2D
 
+class_name Arrow
 
 var speed = 500
 var time_left = null
@@ -16,6 +17,8 @@ func _process(delta):
 		$Timer.start(.4)
 	else:
 		position += (Vector2.RIGHT*speed).rotated(rotation) * delta
+		#var power = get_node("/root/LevelOne/CanvasLayer2/ProgressBar").value
+		#power = time_left * 100
 		await get_tree().create_timer(2).timeout
 		queue_free()
 
@@ -29,3 +32,6 @@ func _on_area_entered(area):
 
 func _on_timer_timeout():
 	self.queue_free()
+
+#func _on_power():
+	#pass # Replace with function body.

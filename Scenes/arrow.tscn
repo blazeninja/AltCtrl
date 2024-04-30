@@ -43,7 +43,7 @@ _data = {
 "shoot": SubResource("Animation_l03a6")
 }
 
-[node name="arrow" type="Area2D"]
+[node name="arrow" type="Area2D" groups=["arrow_controller"]]
 z_index = 5
 scale = Vector2(3, 3)
 collision_layer = 255
