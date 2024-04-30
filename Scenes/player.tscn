@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://b7kr24ktgmqsl"]
+[gd_scene load_steps=7 format=3 uid="uid://b7kr24ktgmqsl"]
 
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_n0a2r"]
 [ext_resource type="Texture2D" uid="uid://dckx7sfkvv5xa" path="res://Assets/crossbow.png" id="2_jgn2i"]
 [ext_resource type="AudioStream" uid="uid://uf7agf1bt226" path="res://Audio/Arrow_Shot.wav" id="3_07qk7"]
 [ext_resource type="AudioStream" uid="uid://cbcy45y07x0au" path="res://Audio/Bow_Draw.wav" id="4_k1h06"]
+[ext_resource type="Script" path="res://Scripts/arrowPower.gd" id="5_bxkf7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8tdip"]
 size = Vector2(89, 78)
@@ -45,3 +46,4 @@ offset_right = 28.0
 offset_bottom = -5.0
 grow_horizontal = 2
 grow_vertical = 0
+script = ExtResource("5_bxkf7")
