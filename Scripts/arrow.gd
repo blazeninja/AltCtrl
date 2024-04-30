@@ -1,6 +1,5 @@
 extends Area2D
 
-class_name Arrow
 
 var speed = 500
 var time_left = null
