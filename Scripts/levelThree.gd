@@ -16,6 +16,7 @@ func _ready():
 func _process(_delta):
 	if Global.score >= 20:
 		Global.arrowCount = 10
+		Global.score = 0
 		get_tree().change_scene_to_file("res://Scenes/levelComplete.tscn")
 	
 	for cloud in clouds: 
