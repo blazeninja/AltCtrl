@@ -1,0 +1,59 @@
+[gd_scene load_steps=9 format=3 uid="uid://ddxrbd05yeuuh"]
+
+[ext_resource type="Texture2D" uid="uid://bte70gggrtx0t" path="res://Assets/skyBackground.png" id="1_k2jng"]
+[ext_resource type="Texture2D" uid="uid://dn4mif1wp1gwo" path="res://Assets/transparent black square.png" id="2_fh8jh"]
+[ext_resource type="FontFile" uid="uid://tjx06dtmqupc" path="res://fonts/atypewriterforme/ATypewriterForMe.ttf" id="3_xkkcr"]
+[ext_resource type="Script" path="res://Ending text.gd" id="4_klbtp"]
+[ext_resource type="FontFile" uid="uid://63jcwrinvwcn" path="res://fonts/Permanent_Marker/PermanentMarker-Regular.ttf" id="5_4xbhp"]
+[ext_resource type="Script" path="res://Scripts/Finish button.gd" id="5_8an2i"]
+[ext_resource type="AudioStream" uid="uid://clfrbrob3psec" path="res://Audio/archeryclick.ogg" id="7_qtiox"]
+[ext_resource type="AudioStream" uid="uid://b4eoophqmqae3" path="res://Audio/Archery_ambientloop.ogg" id="8_reyt7"]
+
+[node name="Ending" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(575, 324)
+scale = Vector2(2.4125, 2.4037)
+texture = ExtResource("1_k2jng")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(565, 323.25)
+scale = Vector2(13.5313, 10.2266)
+texture = ExtResource("2_fh8jh")
+
+[node name="Ending text" type="Label" parent="."]
+offset_left = 134.0
+offset_top = 91.0
+offset_right = 997.0
+offset_bottom = 484.0
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("3_xkkcr")
+theme_override_font_sizes/font_size = 30
+text = "Sample Text Sample Text Sample Text"
+horizontal_alignment = 1
+script = ExtResource("4_klbtp")
+
+[node name="Finish button" type="Button" parent="." node_paths=PackedStringArray("buttonsound", "buttondelay")]
+offset_left = 359.0
+offset_top = 517.0
+offset_right = 777.0
+offset_bottom = 597.0
+theme_override_fonts/font = ExtResource("5_4xbhp")
+theme_override_font_sizes/font_size = 50
+text = "FINISH"
+script = ExtResource("5_8an2i")
+buttonsound = NodePath("../AudioStreamPlayer")
+buttondelay = NodePath("../Timer")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_qtiox")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.056
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_reyt7")
+autoplay = true
+
+[connection signal="pressed" from="Finish button" to="Finish button" method="_on_pressed"]
+[connection signal="timeout" from="Timer" to="Finish button" method="_on_buttondelay_timeout"]

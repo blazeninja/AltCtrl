@@ -35,6 +35,7 @@ theme_override_font_sizes/font_size = 30
 text = "Sample Text Sample Text Sample Text"
 horizontal_alignment = 1
 script = ExtResource("4_stopf")
+metadata/_edit_use_anchors_ = true
 
 [node name="Button" type="Button" parent="." node_paths=PackedStringArray("buttonsound", "buttondelay")]
 offset_left = 346.0
@@ -47,6 +48,7 @@ text = "START TRAINING"
 script = ExtResource("6_ccq5q")
 buttonsound = NodePath("../AudioStreamPlayer")
 buttondelay = NodePath("../buttondelay")
+metadata/_edit_use_anchors_ = true
 
 [node name="buttondelay" type="Timer" parent="."]
 wait_time = 0.579
