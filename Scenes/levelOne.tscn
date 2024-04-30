@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://cwfifm62giko"]
+[gd_scene load_steps=14 format=3 uid="uid://cwfifm62giko"]
 
 [ext_resource type="Script" path="res://Scripts/levelOne.gd" id="1_ovhix"]
 [ext_resource type="Texture2D" uid="uid://bte70gggrtx0t" path="res://Assets/skyBackground.png" id="1_pwilp"]
@@ -10,6 +10,7 @@
 [ext_resource type="AudioStream" uid="uid://cj7fter5nyt10" path="res://Audio/Archery_BGMusic.ogg" id="5_chn38"]
 [ext_resource type="FontFile" uid="uid://63jcwrinvwcn" path="res://fonts/Permanent_Marker/PermanentMarker-Regular.ttf" id="5_onkwp"]
 [ext_resource type="PackedScene" uid="uid://b7kr24ktgmqsl" path="res://Scenes/player.tscn" id="6_733qu"]
+[ext_resource type="FontFile" uid="uid://tjx06dtmqupc" path="res://fonts/atypewriterforme/ATypewriterForMe.ttf" id="11_kq6f3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hf0ld"]
 size = Vector2(1109, 29.5)
@@ -93,6 +94,18 @@ shape = SubResource("RectangleShape2D_f2sca")
 [node name="right" type="CollisionShape2D" parent="wall"]
 position = Vector2(1154, 326)
 shape = SubResource("RectangleShape2D_f2sca")
+
+[node name="Goal" type="Label" parent="."]
+offset_left = 226.0
+offset_top = 20.0
+offset_right = 861.0
+offset_bottom = 93.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("11_kq6f3")
+theme_override_font_sizes/font_size = 56
+text = "Goal: 10"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="pressed" from="CanvasLayer/MainMenuButton" to="CanvasLayer/MainMenuButton" method="_on_pressed"]
 [connection signal="area_entered" from="TargetProto" to="TargetProto" method="_on_area_entered"]

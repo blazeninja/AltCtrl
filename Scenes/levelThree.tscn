@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://ifb3mh1yqnyw"]
+[gd_scene load_steps=12 format=3 uid="uid://ifb3mh1yqnyw"]
 
 [ext_resource type="Script" path="res://Scripts/levelThree.gd" id="1_ytf35"]
 [ext_resource type="Texture2D" uid="uid://bte70gggrtx0t" path="res://Assets/skyBackground.png" id="3_ti5bp"]
@@ -10,6 +10,7 @@
 [ext_resource type="AudioStream" uid="uid://cj7fter5nyt10" path="res://Audio/Archery_BGMusic.ogg" id="9_lrsra"]
 [ext_resource type="PackedScene" uid="uid://b7kr24ktgmqsl" path="res://Scenes/player.tscn" id="10_2gcb3"]
 [ext_resource type="PackedScene" uid="uid://dlvw13evcn33t" path="res://UI/small_target.tscn" id="11_3c3yx"]
+[ext_resource type="FontFile" uid="uid://tjx06dtmqupc" path="res://fonts/atypewriterforme/ATypewriterForMe.ttf" id="11_31jtj"]
 
 [node name="LevelThree" type="Node2D" groups=["Controller"]]
 script = ExtResource("1_ytf35")
@@ -55,6 +56,18 @@ autoplay = true
 
 [node name="player" parent="." instance=ExtResource("10_2gcb3")]
 position = Vector2(565, 574)
+
+[node name="Goal" type="Label" parent="."]
+offset_left = 226.0
+offset_top = 20.0
+offset_right = 861.0
+offset_bottom = 93.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("11_31jtj")
+theme_override_font_sizes/font_size = 56
+text = "Goal: 20"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="pressed" from="CanvasLayer/MainMenuButton" to="CanvasLayer/MainMenuButton" method="_on_pressed"]
 [connection signal="area_entered" from="TargetProto" to="TargetProto" method="_on_area_entered"]
