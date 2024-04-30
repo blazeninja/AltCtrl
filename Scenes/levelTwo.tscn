@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://dkcfjtldi58sr"]
+[gd_scene load_steps=15 format=3 uid="uid://dkcfjtldi58sr"]
 
 [ext_resource type="PackedScene" uid="uid://b7kr24ktgmqsl" path="res://Scenes/player.tscn" id="1_3m1ro"]
 [ext_resource type="Script" path="res://Scripts/levelTwo.gd" id="1_60fsg"]
@@ -10,6 +10,7 @@
 [ext_resource type="FontFile" uid="uid://63jcwrinvwcn" path="res://fonts/Permanent_Marker/PermanentMarker-Regular.ttf" id="8_fbltr"]
 [ext_resource type="AudioStream" uid="uid://clfrbrob3psec" path="res://Audio/archeryclick.ogg" id="9_fd6mw"]
 [ext_resource type="FontFile" uid="uid://tjx06dtmqupc" path="res://fonts/atypewriterforme/ATypewriterForMe.ttf" id="10_u8wev"]
+[ext_resource type="AudioStream" uid="uid://cj7fter5nyt10" path="res://Audio/Archery_BGMusic.ogg" id="11_2gg7m"]
 
 [sub_resource type="Animation" id="Animation_ecsw0"]
 length = 0.001
@@ -62,11 +63,6 @@ scale = Vector2(2.4, 2.4)
 texture = ExtResource("3_omse8")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="MainMenuButton" type="Button" parent="CanvasLayer"]
-offset_right = 8.0
-offset_bottom = 8.0
-text = "Main Menu"
 
 [node name="TargetProto" parent="." instance=ExtResource("4_u6nmw")]
 position = Vector2(150, 300)
@@ -131,6 +127,10 @@ theme_override_font_sizes/font_size = 56
 text = "Goal: 15"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_2gg7m")
+autoplay = true
 
 [connection signal="pressed" from="CanvasLayer2/MainMenuButton" to="CanvasLayer2/MainMenuButton" method="_on_pressed"]
 [connection signal="timeout" from="Timer" to="CanvasLayer2/MainMenuButton" method="_on_timer_timeout"]
