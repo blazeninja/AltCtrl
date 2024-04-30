@@ -14,6 +14,10 @@ func _ready():
 	#generate_cloud()
 	
 func _process(_delta):
+	if Global.score >= 20:
+		Global.arrowCount = 10
+		get_tree().change_scene_to_file("res://Scenes/levelComplete.tscn")
+	
 	for cloud in clouds: 
 		cloud.position.x -= scroll_speed
 		if(cloud.position.x <= -100):
