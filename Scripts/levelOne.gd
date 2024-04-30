@@ -17,7 +17,7 @@ func _process(_delta):
 	if Global.score >= 10:
 		Global.arrowCount = 10
 		Global.score = 0
-		get_tree().change_scene_to_file("res://Scenes/levelThree.tscn")
+		get_tree().change_scene_to_file("res://Scenes/levelTwo.tscn")
 	
 	for cloud in clouds: 
 		cloud.position.x -= scroll_speed

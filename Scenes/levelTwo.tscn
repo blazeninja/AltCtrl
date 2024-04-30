@@ -66,6 +66,7 @@ texture = ExtResource("3_omse8")
 [node name="MainMenuButton" type="Button" parent="CanvasLayer"]
 offset_right = 8.0
 offset_bottom = 8.0
+text = "Main Menu"
 
 [node name="TargetProto" parent="." instance=ExtResource("4_u6nmw")]
 position = Vector2(150, 300)
